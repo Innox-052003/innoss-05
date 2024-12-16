@@ -1,0 +1,11 @@
+public abstract class Ressource {
+    protected int id;
+    protected String type;
+
+    public Ressource(int id, String type) {
+        this.id = id;
+        this.type = type;
+    }
+
+    public abstract void afficherDetails();
+}

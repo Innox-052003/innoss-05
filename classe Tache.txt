@@ -1,0 +1,21 @@
+public class Tache {
+    private int id;
+    private String titre;
+    private String description;
+    private String dateDebut;
+    private String dateFin;
+    private String etat;
+    private int priorite;
+
+    public Tache(int id, String titre, String description, String dateDebut, String dateFin, String etat, int priorite) {
+        this.id = id;
+        this.titre = titre;
+        this.description = description;
+        this.dateDebut = dateDebut;
+        this.dateFin = dateFin;
+        this.etat = etat;
+        this.priorite = priorite;
+    }
+
+    // Getters et setters
+}

@@ -1,0 +1,31 @@
+import java.util.ArrayList;
+
+public class GestionProjetApp {
+    public static void main(String[] args) {
+        // Création d'un projet
+        Projet projet = new Projet(1, "Développement logiciel", "Gestion d'un système complexe", "2024-01-01", "2024-12-31");
+
+        // Ajout de tâches
+        Tache tache1 = new Tache(1, "Analyse des besoins", "Réaliser une analyse complète des besoins", "2024-01-10", "2024-02-15", "En cours", 1);
+        Tache tache2 = new Tache(2, "Développement", "Développer les fonctionnalités principales", "2024-03-01", "2024-08-30", "En attente", 2);
+
+        projet.ajouterTache(tache1);
+        projet.ajouterTache(tache2);
+
+        // Ajout de ressources
+        RessourceHumaine dev = new RessourceHumaine(1, "John", "Doe", "Développeur Java");
+        RessourceMaterielle server = new RessourceMaterielle(2, "Serveur dédié");
+        RessourceLogicielle outil = new RessourceLogicielle(3, "Eclipse", "2023.09");
+
+        // Affichage des informations
+        System.out.println("Projet: " + projet.getTaches().size() + " tâches ajoutées.");
+        dev.afficherDetails();
+        server.afficherDetails();
+        outil.afficherDetails();
+
+        // Génération d'un rapport
+        Rapport rapport = new Rapport(1, "Synthèse", "Le projet avance selon les délais.");
+        rapport.afficherRapport();
+    }
+}
+s

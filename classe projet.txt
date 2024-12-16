@@ -1,0 +1,29 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Projet {
+    private int id;
+    private String nom;
+    private String description;
+    private String dateDebut;
+    private String dateFin;
+    private List<Tache> taches = new ArrayList<>();
+
+    public Projet(int id, String nom, String description, String dateDebut, String dateFin) {
+        this.id = id;
+        this.nom = nom;
+        this.description = description;
+        this.dateDebut = dateDebut;
+        this.dateFin = dateFin;
+    }
+
+    public void ajouterTache(Tache tache) {
+        taches.add(tache);
+    }
+
+    public List<Tache> getTaches() {
+        return taches;
+    }
+
+    // Getters et setters
+}

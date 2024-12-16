@@ -1,0 +1,46 @@
+public class RessourceHumaine extends Ressource {
+    private String nom;
+    private String prenom;
+    private String qualification;
+
+    public RessourceHumaine(int id, String nom, String prenom, String qualification) {
+        super(id, "Humaine");
+        this.nom = nom;
+        this.prenom = prenom;
+        this.qualification = qualification;
+    }
+
+    @Override
+    public void afficherDetails() {
+        System.out.println("Ressource Humaine: " + nom + " " + prenom + ", Qualification: " + qualification);
+    }
+}
+public class RessourceMaterielle extends Ressource {
+    private String description;
+
+    public RessourceMaterielle(int id, String description) {
+        super(id, "Matérielle");
+        this.description = description;
+    }
+
+    @Override
+    public void afficherDetails() {
+        System.out.println("Ressource Matérielle: " + description);
+    }
+}
+
+public class RessourceLogicielle extends Ressource {
+    private String nom;
+    private String version;
+
+    public RessourceLogicielle(int id, String nom, String version) {
+        super(id, "Logicielle");
+        this.nom = nom;
+        this.version = version;
+    }
+
+    @Override
+    public void afficherDetails() {
+        System.out.println("Ressource Logicielle: " + nom + " Version: " + version);
+    }
+}
